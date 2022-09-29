@@ -28,6 +28,14 @@ class Utils {
       elemento.appendChild(col);
     }
   }
+
+  static generateDOMError(elemento, type) {
+    let col = document.createElement("div");
+    col.className = "alert alert-danger";
+    col.innerHTML = `Ops! Something went wrong when trying to generate <strong>${type}</strong> list!!`;
+
+    elemento.appendChild(col);
+  }
 }
 
 module.exports = Utils;
